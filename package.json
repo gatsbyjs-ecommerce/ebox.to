@@ -1,0 +1,82 @@
+{
+  "name": "gatsbyjs-ecommerce",
+  "description": "Static E-commerce site built using GatsbyJs",
+  "version": "3.0.1",
+  "author": "Parminder Klair",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perminder-klair/kickoff-gatsbyjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/perminder-klair/kickoff-gatsbyjs/issues"
+  },
+  "homepage": "https://github.com/perminder-klair/kickoff-gatsbyjs#readme",
+  "scripts": {
+    "start": "npm run develop",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve",
+    "build": "gatsby build",
+    "lint": "eslint --ignore-path .gitignore \"src/**/*.{js,jsx}\""
+  },
+  "dependencies": {
+    "@apollo/react-hooks": "^3.1.0",
+    "@sanity/block-content-to-react": "^2.0.6",
+    "apollo-cache-inmemory": "^1.6.3",
+    "apollo-cache-persist": "^0.1.1",
+    "apollo-client": "^2.6.4",
+    "apollo-link-context": "^1.0.19",
+    "apollo-link-http": "^1.5.16",
+    "cleave.js": "^1.5.3",
+    "currency.js": "^1.2.2",
+    "dayjs": "^1.8.16",
+    "formik": "^1.5.8",
+    "gatsby": "^2.15.9",
+    "gatsby-image": "^2.2.17",
+    "gatsby-plugin-google-analytics": "^2.1.14",
+    "gatsby-plugin-manifest": "^2.2.14",
+    "gatsby-plugin-offline": "^3.0.3",
+    "gatsby-plugin-react-helmet": "^3.1.6",
+    "gatsby-plugin-styled-components": "^3.1.4",
+    "gatsby-remark-images": "^3.1.20",
+    "gatsby-source-sanity": "^5.0.2",
+    "graphql-tag": "^2.10.1",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.15",
+    "polished": "^3.4.1",
+    "prop-types": "^15.7.2",
+    "randomstring": "^1.1.5",
+    "react": "^16.9.0",
+    "react-accessible-accordion": "^2.4.2",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "react-image-gallery": "^0.9.1",
+    "react-share": "^3.0.1",
+    "react-spring": "^5.3.8",
+    "styled-components": "^4.3.2",
+    "styled-reset-advanced": "^1.0.1",
+    "sweetalert": "^2.1.2",
+    "yup": "^0.27.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.0.3",
+    "babel-plugin-styled-components": "^1.10.6",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "gatsbyjs",
+    "javascript",
+    "graphql",
+    "graphql",
+    "reactjs",
+    "boilerplate"
+  ]
+}
