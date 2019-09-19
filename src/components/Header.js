@@ -16,7 +16,9 @@ const cartQuery = gql`
     }
   }
 `;
-
+const Wrapper = styled.div`
+  padding: 0rem 6rem;
+`;
 const Container = styled.div`
   margin-top: 0.6rem;
   a {
@@ -36,7 +38,7 @@ const Container = styled.div`
     }
   }
   img.logo {
-    max-width: 150px;
+    max-width: 100px;
   }
 `;
 
@@ -84,7 +86,6 @@ const MobileMenu = styled(animated.div)`
 `;
 
 const Cart = styled.div`
-  margin-top: 1rem;
   font-size: 1.2rem;
   width: 80px;
   float: right;
@@ -93,7 +94,6 @@ const Cart = styled.div`
     color: #4a4a4a !important;
   }
   span {
-    font-weight: 700;
     padding: 0 0.1rem 0 0.5rem;
   }
   .count {
@@ -155,33 +155,25 @@ const Header = ({ home }) => {
   };
 
   return (
-    <div className="container">
+    <Wrapper>
       <Container className="is-hidden-mobile">
         <div className="columns">
           <div className="column">
             <SocialIcons data={home} />
           </div>
           <div className="column has-text-centered">
-            <Link to="/">
-              <img
-                src={config.logo}
-                className="logo"
-                alt={`${config.siteName} logo`}
-              />
-            </Link>
+            <h4 className="title is-4">EBOX</h4>
           </div>
           <div className="column has-text-right has-text-weight-semibold	">
             <p>
-              <a href={`mailto:${home.email}`}>{home.email}</a> |{' '}
-              <a href={`tel:${home.telephone}`}>{home.telephone}</a>
+              <a href="/">
+                Search <i class="fas fa-search"></i>
+              </a>{' '}
+              |{cart}
             </p>
-            {cart}
           </div>
         </div>
-        <nav
-          className="navbar has-background-white-ter"
-          role="navigation"
-          aria-label="main navigation">
+        <nav className="navbar" role="navigation" aria-label="main navigation">
           <div className="navbar-menu is-uppercase has-text-weight-bold">
             {NavItems.map(item => (
               <Link to={item.url} className="navbar-item" key={item.id}>
@@ -239,7 +231,7 @@ const Header = ({ home }) => {
           )}
         </Spring>
       </ContainerMobile>
-    </div>
+    </Wrapper>
   );
 };
 

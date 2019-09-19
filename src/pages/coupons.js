@@ -6,6 +6,16 @@ import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import Heading from '../components/Heading';
 import CouponItem from '../components/CouponItem';
+import styled from 'styled-components';
+
+const ContainerImage = styled.div`
+  background-image: url(/images/bg.jpg);
+  width: 100%;
+  height: auto;
+  padding: 5.8rem 0rem 2rem;
+  margin-bottom: 3rem;
+
+`;
 
 export const couponsQuery = graphql`
   query Coupons {
@@ -36,9 +46,10 @@ export default class Coupons extends React.Component {
           description="Get a best detals"
           url={`${config.siteUrl}/coupons`}
         />
-        <div className="section">
           <div className="container">
+          <ContainerImage>
             <Heading>Coupons</Heading>
+          </ContainerImage>
             <div className="columns is-multiline">
               {coupons.map(coupon => (
                 <div key={coupon.node.id} className="column is-one-third">
@@ -47,7 +58,6 @@ export default class Coupons extends React.Component {
               ))}
             </div>
           </div>
-        </div>
       </Layout>
     );
   }

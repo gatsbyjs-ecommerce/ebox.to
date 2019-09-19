@@ -1,14 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import config from '../utils/config';
-
 const ContainerImage = styled.div`
+  background-image: url(/images/bg.jpg);
   width: 100%;
   height: auto;
-  img {
-    width: 100%;
-    height: auto;
+  padding: 10rem 0rem;
+  h2 {
+    padding-bottom: 2rem;
   }
 `;
 
@@ -21,8 +20,9 @@ const StripMobile = styled.div`
 
 const HomeBanner = ({ data }) => (
   <>
-    <ContainerImage className="is-hidden-mobile">
-      <img src={config.homeBannerImage} alt="home banner" />
+    <ContainerImage className="is-hidden-mobile has-text-centered has-text-white">
+      <h2 className="is-size-2 is-uppercase	has-text-weight-semibold">spring sale</h2>
+      <h6 className="is-size-6">Here's description of the featured collection or promotion.</h6>
     </ContainerImage>
     <StripMobile className="is-hidden-tablet">
       <p className="is-size-6	is-uppercase has-text-white has-text-centered has-text-weight-semibold">

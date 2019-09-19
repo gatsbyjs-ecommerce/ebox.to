@@ -27,7 +27,7 @@ const Bottom = styled.div`
   width: 100%;
   position: absolute;
   bottom: 0;
-  > .section {
+  .section {
     padding: 1.4rem 1.5rem;
   }
 `;
@@ -66,6 +66,9 @@ const Footer = ({ home }) => (
         <div className="column has-text-white">
           <Heading className="is-uppercase is-size-5">Connect</Heading>
           <SocialIcons data={home} inverted />
+          <p>+123 456 789</p>
+          <p>437 Euclid Avenue, Los angeles</p>
+          <p>abcd@gmail.com</p>
         </div>
       </div>
     </div>

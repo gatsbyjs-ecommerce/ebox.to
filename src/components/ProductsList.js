@@ -8,6 +8,10 @@ import Heading from './Heading';
 
 const Container = styled.section`
   position: relative;
+  margin-top: 5rem;
+  .columns {
+    justify-content: space-around;
+  }
 `;
 
 class ProductsList extends React.Component {
