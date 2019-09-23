@@ -2,22 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import config from '../utils/config';
-
-const Line = styled.div`
-  height: 3px;
-  width: 50px;
-  background-color: ${config.primaryColor};
-  margin: 0.6rem auto 3rem auto;
+const Container = styled.div`
+  line-height: 2.5;
 `;
 
 const Heading = ({ children }) => (
-  <>
-    <h4 className="is-size-4 has-text-centered is-uppercase has-text-weight-bold">
-      {children}
-    </h4>
-    <Line />
-  </>
+  <Container className="is-size-4 has-text-centered is-uppercase has-text-weight-bold">
+    {children}
+  </Container>
 );
 
 Heading.propTypes = {

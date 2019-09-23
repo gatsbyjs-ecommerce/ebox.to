@@ -18,14 +18,12 @@ const cartQuery = gql`
 `;
 const Wrapper = styled.div`
   padding: 0rem 6rem;
+  background: #ff9898;
 `;
 const Container = styled.div`
   margin-top: 0.6rem;
   a {
     color: #4a4a4a;
-  }
-  .navbar {
-    margin-bottom: 0.6rem;
   }
   .navbar-menu {
     flex-grow: unset;

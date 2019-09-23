@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const ContainerImage = styled.div`
   background-image: url(/images/bg.jpg);
+  background-size: cover;
   width: 100%;
   height: auto;
   padding: 10rem 0rem;

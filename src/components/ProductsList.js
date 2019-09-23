@@ -11,6 +11,7 @@ const Container = styled.section`
   margin-top: 5rem;
   .columns {
     justify-content: space-around;
+    margin-top: 3rem;
   }
 `;
 
@@ -37,6 +38,8 @@ class ProductsList extends React.Component {
     return (
       <Container className="section">
         <Heading>{title}</Heading>
+        <p className="has-text-centered">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia
+        </p>
         <div className="columns is-multiline">
           <Trail
             native
