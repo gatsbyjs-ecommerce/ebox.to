@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import config from '../utils/config';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
-import Heading from '../components/Heading';
 import CouponItem from '../components/CouponItem';
 import styled from 'styled-components';
 
@@ -48,7 +47,7 @@ export default class Coupons extends React.Component {
         />
           <div className="container">
           <ContainerImage>
-            <Heading>Coupons</Heading>
+            <h2>Coupons</h2>
           </ContainerImage>
             <div className="columns is-multiline">
               {coupons.map(coupon => (

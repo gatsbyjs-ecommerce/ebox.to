@@ -7,6 +7,7 @@ import Img from 'gatsby-image';
 
 import config from '../utils/config';
 import { formatCurrency } from '../utils/helpers';
+import Title from './element/Title';
 
 const Container = styled(animated.div)`
   .card {
@@ -22,17 +23,14 @@ const Container = styled(animated.div)`
       a {
         color: #363636;
       }
-      .price-container {
-        width: 150px;
-        position: absolute;
-        right: 0;
-        top: 0.5rem;
-      }
       .price {
         color: ${config.primaryColor};
       }
       .old-price {
         text-decoration: line-through;
+      }
+      .field {
+        margin-top: 2rem;
       }
     }
   }
@@ -65,21 +63,21 @@ const ProductItem = ({ item, styles }) => (
       <div className="card-content">
         <div className="media">
           <div className="media-content">
-            <p className="title is-5" style={{ maxWidth: '88%' }}>
+            <Title className="title is-5 has-text-weight-bold">
               <Link to={`/product/${item.slug.current}`}>{item.title}</Link>
-            </p>
+            </Title>
             {item.variant && (
               <p className="subtitle is-6 has-text-grey">
                 {item.variant.color}
               </p>
             )}
             {item.variant && (
-              <div className="price-container has-text-right">
-                <p className="title is-5 has-text-weight-normal price">
+              <div className="field is-grouped">
+                <p className="control title is-5 has-text-weight-normal price">
                   {formatCurrency(item.variant.discountPrice)}
                 </p>
                 {item.variant.discountPrice < item.variant.price && (
-                  <p className="subtitle is-6 has-text-grey-light old-price">
+                  <p className="control  is-6 has-text-grey-light old-price">
                     {formatCurrency(item.variant.price)}
                   </p>
                 )}

@@ -39,7 +39,7 @@ class SubscribeForm extends React.Component {
 
     return (
       <Container onSubmit={handleSubmit}>
-        <div className="field">
+        <div className="field is-grouped">
           <div className="control">
             <input
               className="input is-shadowless"

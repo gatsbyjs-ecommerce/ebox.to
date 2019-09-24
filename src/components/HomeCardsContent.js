@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import HeroCards from './HeroCards';
 
 const Container = styled.div`
-  margin-top: 3rem;
+  margin: 5rem auto;
   .column {
     padding: 0rem 0.75rem;
   }

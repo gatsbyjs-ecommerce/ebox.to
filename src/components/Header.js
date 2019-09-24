@@ -18,26 +18,35 @@ const cartQuery = gql`
 `;
 const Wrapper = styled.div`
   padding: 0rem 6rem;
-  background: #ff9898;
+  background: ${props => props.theme.darkShades};
 `;
 const Container = styled.div`
   margin-top: 0.6rem;
+  .navbar {
+    background: ${props => props.theme.darkShades};
+  }
   a {
-    color: #4a4a4a;
+    color: ${props => props.theme.textWhite};
+  }
+  p {
+    color: ${props => props.theme.textWhite}!important;
   }
   .navbar-menu {
     flex-grow: unset;
     margin: 0 auto;
-    .navbar-item {
-      font-size: 1.1rem;
-    }
     .navbar-item:hover {
-      color: #4a4a4a;
+      color: ${props => props.theme.textWhite};
+      background: ${props => props.theme.darkShades};
     }
   }
-  img.logo {
-    max-width: 100px;
+  img {
+    height: 40px;
+    width: 120px;
   }
+  .columns {
+    border-bottom: 1px solid ${props => props.theme.textWhite};
+  }
+
 `;
 
 const ContainerMobile = styled.div`
@@ -84,15 +93,11 @@ const MobileMenu = styled(animated.div)`
 `;
 
 const Cart = styled.div`
-  font-size: 1.2rem;
   width: 80px;
   float: right;
   position: relative;
-  a {
-    color: #4a4a4a !important;
-  }
   span {
-    padding: 0 0.1rem 0 0.5rem;
+    padding: 0rem 0.1rem;
   }
   .count {
     background-color: ${config.primaryColor};
@@ -134,8 +139,7 @@ const Header = ({ home }) => {
   const cart = (
     <Cart>
       <Link to="/cart">
-        <i className="fas fa-shopping-cart" />
-        <span>Cart</span>{' '}
+        <span>Cart</span><i className="fas fa-shopping-cart" />
         {cartItems.length > 0 && (
           <div className="count">{cartItems.length}</div>
         )}
@@ -160,12 +164,14 @@ const Header = ({ home }) => {
             <SocialIcons data={home} />
           </div>
           <div className="column has-text-centered">
-            <h4 className="title is-4">EBOX</h4>
+            <a href="/">
+              <img src="/images/logo.png" alt="logo" />
+            </a>
           </div>
           <div className="column has-text-right has-text-weight-semibold	">
             <p>
               <a href="/">
-                Search <i class="fas fa-search"></i>
+                Search <i className="fas fa-search" />
               </a>{' '}
               |{cart}
             </p>

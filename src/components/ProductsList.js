@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import { Trail } from 'react-spring';
 
 import ProductItem from './ProductItem';
-import Heading from './Heading';
+import Heading from './element/Heading';
+import Subtitle from './element/Subtitle';
 
 const Container = styled.section`
   position: relative;
@@ -38,8 +39,8 @@ class ProductsList extends React.Component {
     return (
       <Container className="section">
         <Heading>{title}</Heading>
-        <p className="has-text-centered">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia
-        </p>
+        <Subtitle> Far far away, behind the word mountains, far from the countries Vokalia and Consonantia
+        </Subtitle>
         <div className="columns is-multiline">
           <Trail
             native

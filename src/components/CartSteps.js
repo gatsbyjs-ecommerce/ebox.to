@@ -5,7 +5,7 @@ import gql from 'graphql-tag';
 import { useQuery, useMutation, useApolloClient } from '@apollo/react-hooks';
 import { isEmpty } from 'lodash';
 
-import Heading from './Heading';
+import Heading from './element/Heading';
 import CheckoutProgress from './CheckoutProgress';
 import CartItems from './CartItems';
 import CheckoutForm from './CheckoutForm';

@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import config from '../utils/config';
 import Seo from './Seo';
 import Layout from './Layout';
-import Heading from './Heading';
+import Heading from './element/Heading';
 
 export const pageQuery = graphql`
   query PageByPath($slug: String!) {

@@ -22,7 +22,7 @@ import {
 import config from '../utils/config';
 import { formatCurrency } from '../utils/helpers';
 import { BlockContent } from './Content';
-import Heading from './Heading';
+import Heading from './element/Heading';
 
 // const cartQuery = graphql`
 //   query {

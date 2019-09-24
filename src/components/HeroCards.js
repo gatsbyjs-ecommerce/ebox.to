@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import Title from './element/Title';
+import Subtitle from './element/Subtitle';
 
 const Container = styled.div`
   .card-content {
     padding: 0.5rem 1.5rem;
   }
   .media-left {
-    border: 2px solid black;
+    border: 2px solid ${props => props.theme.darkShades};
     padding: 4.5%;
     border-radius: 2rem;
     height: 4rem;
@@ -16,6 +18,7 @@ const Container = styled.div`
 `;
 const Icon = styled.i`
   font-size: 1.75rem;
+  color: ${props => props.theme.darkShades};
 `;
 
 const HeroCards = ({ icon, title, subtitle }) => (
@@ -23,11 +26,13 @@ const HeroCards = ({ icon, title, subtitle }) => (
     <div className="card-content">
       <div className="media">
         <div className="media-left">
-          <Icon className={icon}></Icon>
+          <Icon className={icon} />
         </div>
         <div className="media-content">
-          <p className="title is-4">{title}</p>
-          <p className="subtitle is-7 has-text-weight-semibold">{subtitle}</p>
+          <Title>{title}</Title>
+          <Subtitle className="subtitle is-7 has-text-weight-semibold">
+            {subtitle}
+          </Subtitle>
         </div>
       </div>
     </div>

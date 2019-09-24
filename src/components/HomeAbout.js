@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { HTMLContent } from './Content';
-import Heading from './Heading';
+import Heading from './element/Heading';
 
 const Container = styled.section`
   position: relative;

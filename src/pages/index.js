@@ -8,6 +8,7 @@ import HomeBanner from '../components/HomeBanner';
 import ProductsList from '../components/ProductsList';
 import HomeAbout from '../components/HomeAbout';
 import HomeCardsContent from '../components/HomeCardsContent';
+import Subscribe from '../components/Subscribe';
 
 export const query = graphql`
   query HomePageQuery {
@@ -60,7 +61,9 @@ const HomePage = ({ data }) => {
           <HomeCardsContent />
           <ProductsList products={products} />
           <HomeAbout data={home} />
-        </div>
+          
+          </div>
+          <Subscribe />
       </div>
     </Layout>
   );

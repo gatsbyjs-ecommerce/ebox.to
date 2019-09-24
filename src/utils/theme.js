@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset-advanced';
 import { darken, lighten } from 'polished';
 
-const mainBrandColor = '#00D1B2';
+const mainBrandColor = '#23b2b8';
 const lightShades = '#F5F5F5';
 const darkAccent = '#3173DC';
 const darkShades = '#0A0A0A';
@@ -25,6 +25,7 @@ export const theme = {
   dangerColor: '#f44336',
 
   primaryColor: mainBrandColor,
+  textWhite: '#ffffff',
   borderColor: '#e0e6ef',
   backgroundColor: '#FFFFFF',
   backgroundInputColor: lightShades,
@@ -61,7 +62,7 @@ const GlobalStyle = createGlobalStyle`
   p {
     line-height: 1.5rem;
   }
-  p, .title, .box {
+  .title, .box {
     color: ${theme.textColor} !important;
   }
   .subtitle {
