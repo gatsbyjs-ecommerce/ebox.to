@@ -1,11 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
+import styled from 'styled-components';
 import config from '../utils/config';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import CouponItem from '../components/CouponItem';
-import styled from 'styled-components';
 
 const ContainerImage = styled.div`
   background-image: url(/images/bg.jpg);
@@ -13,7 +13,10 @@ const ContainerImage = styled.div`
   height: auto;
   padding: 5.8rem 0rem 2rem;
   margin-bottom: 3rem;
-
+  h2 {
+    justify-content: center;
+    display: flex;
+  }
 `;
 
 export const couponsQuery = graphql`
@@ -45,18 +48,20 @@ export default class Coupons extends React.Component {
           description="Get a best detals"
           url={`${config.siteUrl}/coupons`}
         />
-          <div className="container">
+        <div className="container">
           <ContainerImage>
-            <h2>Coupons</h2>
+            <h2 className="is-size-3 has-text-weight-bold is-uppercase">
+              Coupons
+            </h2>
           </ContainerImage>
-            <div className="columns is-multiline">
-              {coupons.map(coupon => (
-                <div key={coupon.node.id} className="column is-one-third">
-                  <CouponItem data={coupon.node} />
-                </div>
-              ))}
-            </div>
+          <div className="columns is-multiline">
+            {coupons.map(coupon => (
+              <div key={coupon.node.id} className="column is-one-third">
+                <CouponItem data={coupon.node} />
+              </div>
+            ))}
           </div>
+        </div>
       </Layout>
     );
   }
