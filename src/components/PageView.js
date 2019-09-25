@@ -34,7 +34,7 @@ export default class PageView extends React.Component {
         <div className="section">
           <div className="container">
             <Heading>{page.title}</Heading>
-            {page.description}
+            <p>{page.description}</p>
           </div>
         </div>
       </Layout>
