@@ -12,6 +12,10 @@ const Container = styled.div`
 `;
 const SubscribeForm = styled.div`
   margin: 3rem 0rem;
+  .input {
+    box-shadow: rgba(0,0,0,0.08) 0px 0px 0px; !important;
+    border: 2px solid #f7f3f3;
+  }
 `;
 
 const Subscribe = () => (
@@ -21,7 +25,7 @@ const Subscribe = () => (
         <Subtitle className="subtitle is-5 has-text-weight-semibold has-text-centered">
           JOIN OUR NEWSLETTER
         </Subtitle>
-        <Heading>Subscribe to get Updated with new offers</Heading>
+        <Heading>Subscribe Below to get latest offers</Heading>
         <SubscribeForm>
           <div className="field is-grouped is-medium">
             <p className="control is-expanded">
