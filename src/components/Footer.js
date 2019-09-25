@@ -76,7 +76,7 @@ const Footer = ({ home }) => (
       <div className="section container">
         <div className="columns has-text-white">
           <div className="column">
-            <p>Copyright © 2018 - {config.siteName}</p>
+            <p>Copyright © 2019 - {config.siteName}</p>
           </div>
           <div className="column has-text-right is-hidden-mobile">
             <img

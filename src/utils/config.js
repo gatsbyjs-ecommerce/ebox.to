@@ -1,7 +1,7 @@
 module.exports = {
   debug: process.env.NODE_ENV === 'development',
 
-  siteName: 'GatsbyJs Ecommerce',
+  siteName: 'Ebox',
   author: 'Parminder Klair',
   description:
     'A ecommerce system using ReactJs, bundled with awesome GatsbyJs.',
@@ -16,7 +16,7 @@ module.exports = {
   backgroundColor: '#e0e0e0',
   themeColor: '#c62828',
 
-  currency: '£',
+  currency: '₹',
   stripePublishableKey:
     process.env.NODE_ENV === 'development'
       ? 'pk_test_P0DEB2otulfya51U9lIkLXAn'
