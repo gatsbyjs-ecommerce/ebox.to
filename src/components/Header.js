@@ -46,7 +46,6 @@ const Container = styled.div`
   .columns {
     border-bottom: 1px solid ${props => props.theme.textWhite};
   }
-
 `;
 
 const ContainerMobile = styled.div`
@@ -139,7 +138,8 @@ const Header = ({ home }) => {
   const cart = (
     <Cart>
       <Link to="/cart">
-        <span>Cart</span><i className="fas fa-shopping-cart" />
+        <span>Cart</span>
+        <i className="fas fa-shopping-cart" />
         {cartItems.length > 0 && (
           <div className="count">{cartItems.length}</div>
         )}
@@ -165,7 +165,8 @@ const Header = ({ home }) => {
           </div>
           <div className="column has-text-centered">
             <a href="/">
-              <img src="/images/logo.png" alt="logo" />
+              <p className="is-size-2 has-text-weight-bold">Ebox</p>
+              {/* <img src="/images/logo.png" alt="logo" /> */}
             </a>
           </div>
           <div className="column has-text-right has-text-weight-semibold	">
@@ -216,7 +217,8 @@ const Header = ({ home }) => {
             height: mobileMenuActive ? 800 : 0,
             opacity: mobileMenuActive ? 1 : 0,
             paddingTop: mobileMenuActive ? 0 : -64,
-          }}>
+          }}
+        >
           {styles => (
             <MobileMenu style={styles}>
               <aside className="menu">
