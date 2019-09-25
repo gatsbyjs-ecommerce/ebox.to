@@ -50,20 +50,15 @@ const HomePage = ({ data }) => {
 
   return (
     <Layout>
-      <Seo
-        title="Latest punjabi suits collection"
-        description={home.description}
-        url={config.siteUrl}
-      />
+      <Seo title="Home" description={home.description} url={config.siteUrl} />
       <div>
         <HomeBanner data={home} />
         <div className="container">
           <HomeCardsContent />
           <ProductsList products={products} />
           <HomeAbout data={home} />
-          
-          </div>
-          <Subscribe />
+        </div>
+        <Subscribe />
       </div>
     </Layout>
   );
