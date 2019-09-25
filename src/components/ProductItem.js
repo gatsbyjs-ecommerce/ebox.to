@@ -13,7 +13,7 @@ const Container = styled(animated.div)`
   .card {
     border: none;
     box-shadow: none;
-    .image.is-4by5 {
+    .image.is-4by3 {
       padding-top: 0;
     }
     .card-content {
@@ -38,7 +38,7 @@ const Container = styled(animated.div)`
 
 const Image = styled(Img)`
   object-fit: cover;
-  height: 540px;
+  height: auto;
   width: 100%;
 `;
 
@@ -48,7 +48,7 @@ const ProductItem = ({ item, styles }) => (
       {item.variant.featuredImage && (
         <div className="card-image">
           <Link to={`/product/${item.slug.current}`}>
-            <figure className="image is-4by5">
+            <figure className="image is-4by3">
               <Image fluid={item.variant.featuredImage.asset.fluid} />
               {/* <Image
                 sizes={item.variant.featuredImage.asset.fluid.sizes}

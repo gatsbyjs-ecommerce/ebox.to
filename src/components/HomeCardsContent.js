@@ -4,12 +4,16 @@ import HeroCards from './HeroCards';
 
 const Container = styled.div`
   margin: 5rem auto;
-  .column {
-    padding: 0rem 0.75rem;
-  }
   .columns {
+    height: 15rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     padding: 2rem;
+    @media only screen and (max-width: 768px) {
+      height: 100%;
+    }
+  }
+  .column {
+    align-self: center;
   }
   .center {
     border-right: 1px solid black;

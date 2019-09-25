@@ -15,6 +15,10 @@ const Container = styled.footer`
   margin-top: 6rem;
   p {
     color: #ffffff !important;
+    padding: 0px 0px 8px;
+  }
+  li {
+    padding: 0px 0px 8px;
   }
 `;
 
@@ -47,11 +51,13 @@ const Footer = ({ home }) => (
     <div className="section container is-hidden-mobile">
       <div className="columns is-multiline">
         <div className="column has-text-white">
-          <Heading className="is-uppercase is-size-5">Customer service</Heading>
+          <Heading className="is-uppercase is-size-4 has-text-weight-semibold">
+            Customer service
+          </Heading>
           <ul>
             {NavItems.map(item => (
               <li key={item.id}>
-                <Link to={item.url} className="has-text-white">
+                <Link to={item.url} className="has-text-white is-size-5">
                   {item.name}
                 </Link>
               </li>
@@ -59,16 +65,24 @@ const Footer = ({ home }) => (
           </ul>
         </div>
         <div className="column has-text-white">
-          <Heading className="is-uppercase is-size-5">Subscribe</Heading>
-          <p>Receive special offers when you signup our mailing list</p>
+          <Heading className="is-uppercase is-size-4 has-text-weight-semibold">
+            Subscribe
+          </Heading>
+          <p className="has-text-white is-size-5">
+            Receive special offers when you signup our mailing list
+          </p>
           <SubscribeForm />
         </div>
         <div className="column has-text-white">
-          <Heading className="is-uppercase is-size-5">Connect</Heading>
+          <Heading className="is-uppercase is-size-4 has-text-weight-semibold">
+            Connect
+          </Heading>
           <SocialIcons data={home} inverted />
-          <p>+123 456 789</p>
-          <p>437 Euclid Avenue, Los angeles</p>
-          <p>abcd@gmail.com</p>
+          <p className="has-text-white is-size-5">+123 456 789</p>
+          <p className="has-text-white is-size-5">
+            437 Euclid Avenue, Los angeles
+          </p>
+          <p className="has-text-white is-size-5">abcd@gmail.com</p>
         </div>
       </div>
     </div>
@@ -101,4 +115,3 @@ Footer.propTypes = {
 };
 
 export default Footer;
-

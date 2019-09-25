@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { HTMLContent } from './Content';
+import Subtitle from './element/Subtitle';
 import Heading from './element/Heading';
 
 const Container = styled.section`
@@ -9,12 +9,18 @@ const Container = styled.section`
   .columns {
     margin-top: 2rem;
   }
+  .is-multiline {
+    justify-content: center;
+  }
 `;
 
 const HomeAbout = ({ data }) => (
   <Container className="section">
     <Heading>Follow Us On Instagram</Heading>
-    <HTMLContent className="has-text-centered" content={data.homeIntro} />
+    <Subtitle className="subtitle is-5 has-text-weight-semibold has-text-centered">
+      Far far away, behind the word mountains, far from the countries Vokalia
+      and Consonantia
+    </Subtitle>
     <div className="columns is-multiline">
       <div>
         <figure className="image is-128x128">

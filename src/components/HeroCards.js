@@ -30,7 +30,7 @@ const HeroCards = ({ icon, title, subtitle }) => (
         </div>
         <div className="media-content">
           <Title>{title}</Title>
-          <Subtitle className="subtitle is-7 has-text-weight-semibold">
+          <Subtitle className="subtitle is-6 has-text-weight-semibold">
             {subtitle}
           </Subtitle>
         </div>

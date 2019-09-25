@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import Heading from './element/Heading';
 import Subtitle from './element/Subtitle';
 
+const Card = styled.div`
+  margin: 1rem 2rem;
+`;
+
 const Container = styled.div`
   margin: 4rem 0rem;
 `;
@@ -11,24 +15,32 @@ const SubscribeForm = styled.div`
 `;
 
 const Subscribe = () => (
-  <Container>
-    <div className="column is-half is-offset-one-quarter">
-    <Subtitle>JOIN OUR NEWSLETTER</Subtitle>
-    <Heading>Subscribe to get Updated with new offers</Heading>
-    <SubscribeForm>
-      <div class="field is-grouped is-medium">
-        <p class="control is-expanded">
-          <input class="input is-medium" type="text" placeholder="Enter Email Address" />
-        </p>
-        <p class="control">
-          <a class="button is-info is-medium">
-          SUBSCRIBE NOW
-          </a>
-        </p>
+  <Card className="card">
+    <Container>
+      <div className="column is-half is-offset-one-quarter">
+        <Subtitle className="subtitle is-5 has-text-weight-semibold has-text-centered">
+          JOIN OUR NEWSLETTER
+        </Subtitle>
+        <Heading>Subscribe to get Updated with new offers</Heading>
+        <SubscribeForm>
+          <div className="field is-grouped is-medium">
+            <p className="control is-expanded">
+              <input
+                className="input is-medium"
+                type="text"
+                placeholder="Enter Email Address"
+              />
+            </p>
+            <p className="control">
+              <a className="button is-info is-medium has-text-weight-bold">
+                SUBSCRIBE NOW
+              </a>
+            </p>
+          </div>
+        </SubscribeForm>
       </div>
-    </SubscribeForm>
-    </div>
-  </Container>
+    </Container>
+  </Card>
 );
 
 export default Subscribe;

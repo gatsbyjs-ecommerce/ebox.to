@@ -19,11 +19,11 @@ const StripMobile = styled.div`
 `;
 
 const HomeBanner = ({ data }) => (
-  <>
+  <div>
     <ContainerImage className="is-hidden-mobile">
       <div className="column is-4 is-offset-8 has-text-centered">
-        <Subtitle white>
-          Here's description of the featured collection or promotion.
+        <Subtitle white className="is-size-5 has-text-weight-bold">
+          Here&apos;s description of the featured collection or promotion.
         </Subtitle>
         <Heading white>spring sale</Heading>
       </div>
@@ -33,7 +33,7 @@ const HomeBanner = ({ data }) => (
         {data.homeSliderSubTitle}
       </p>
     </StripMobile>
-  </>
+  </div>
 );
 
 export default HomeBanner;

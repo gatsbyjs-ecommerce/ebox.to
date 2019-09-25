@@ -169,7 +169,7 @@ const Header = ({ home }) => {
               {/* <img src="/images/logo.png" alt="logo" /> */}
             </a>
           </div>
-          <div className="column has-text-right has-text-weight-semibold	">
+          <div className="column has-text-right has-text-weight-bold">
             <p>
               <a href="/">
                 Search <i className="fas fa-search" />
@@ -217,8 +217,7 @@ const Header = ({ home }) => {
             height: mobileMenuActive ? 800 : 0,
             opacity: mobileMenuActive ? 1 : 0,
             paddingTop: mobileMenuActive ? 0 : -64,
-          }}
-        >
+          }}>
           {styles => (
             <MobileMenu style={styles}>
               <aside className="menu">
