@@ -28,7 +28,7 @@ const Container = styled.div`
   a {
     color: ${props => props.theme.textWhite};
     :focus {
-      background-color: #000000;ß
+      background-color: #000000;
     }
   }
   p {
