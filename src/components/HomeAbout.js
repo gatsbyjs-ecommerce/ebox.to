@@ -16,8 +16,8 @@ const Container = styled.section`
 
 const HomeAbout = ({ data }) => (
   <Container className="section">
-    <Heading>Follow Us On Instagram</Heading>
-    <Subtitle className="subtitle is-5 has-text-weight-semibold has-text-centered">
+    <Heading centered>Follow Us On Instagram</Heading>
+    <Subtitle className="has-text-weight-semibold has-text-centered">
       Far far away, behind the word mountains, far from the countries Vokalia
       and Consonantia
     </Subtitle>

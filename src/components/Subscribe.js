@@ -22,7 +22,7 @@ const Subscribe = () => (
   <Card className="card">
     <Container>
       <div className="column is-half is-offset-one-quarter">
-        <Subtitle className="subtitle is-5 has-text-weight-semibold has-text-centered">
+        <Subtitle className="has-text-weight-semibold has-text-centered">
           JOIN OUR NEWSLETTER
         </Subtitle>
         <Heading>Subscribe Below to get latest offers</Heading>

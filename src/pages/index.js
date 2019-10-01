@@ -7,7 +7,7 @@ import Layout from '../components/Layout';
 import HomeBanner from '../components/HomeBanner';
 import ProductsList from '../components/ProductsList';
 import HomeAbout from '../components/HomeAbout';
-import HomeCardsContent from '../components/HomeCardsContent';
+// import HomeCardsContent from '../components/HomeCardsContent';
 import Subscribe from '../components/Subscribe';
 
 export const query = graphql`
@@ -54,7 +54,7 @@ const HomePage = ({ data }) => {
       <div>
         <HomeBanner data={home} />
         <div className="container">
-          <HomeCardsContent />
+          {/* <HomeCardsContent /> */}
           <ProductsList products={products} />
           <HomeAbout data={home} />
         </div>

@@ -39,10 +39,9 @@ class ProductsList extends React.Component {
     return (
       <Container className="section">
         <Heading>{title}</Heading>
-        <Subtitle className="subtitle is-5 has-text-weight-semibold has-text-centered">
+        <Subtitle className="has-text-weight-semibold">
           {' '}
-          Far far away, behind the word mountains, far from the countries
-          Vokalia and Consonantia
+          In order to give you better service
         </Subtitle>
         <div className="columns is-multiline">
           <Trail

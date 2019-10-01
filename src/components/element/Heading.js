@@ -8,9 +8,11 @@ const Container = styled.div`
     props.white ? props.theme.textWhite : props.theme.darkShades};
 `;
 
-const Heading = ({ children, ...props }) => (
+const Heading = ({ children, centered, ...props }) => (
   <Container
-    className="is-size-2 has-text-centered is-uppercase has-text-weight-semibold"
+    className={`is-size-2 is-uppercase has-text-weight-bold ${
+      centered ? 'has-text-centered' : ''
+    }`}
     {...props}>
     {children}
   </Container>

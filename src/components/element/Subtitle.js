@@ -7,8 +7,10 @@ const Container = styled.p`
     props.white ? props.theme.textWhite : props.theme.textColorLite}!important;
 `;
 
-const Subtitle = ({ children, ...props }) => (
-  <Container className="is-size-6 has-text-centered" {...props}>
+const Subtitle = ({ children, centered, ...props }) => (
+  <Container
+    className={`is-size-7 ${centered ? 'has-text-centered' : ''}`}
+    {...props}>
     {children}
   </Container>
 );
