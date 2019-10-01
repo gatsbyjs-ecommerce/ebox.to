@@ -46,9 +46,6 @@ const Container = styled.div`
     height: 40px;
     width: 120px;
   }
-  .columns {
-    border-bottom: 1px solid ${props => props.theme.textWhite};
-  }
 `;
 
 const ContainerMobile = styled.div`
@@ -163,14 +160,28 @@ const Header = ({ home }) => {
     <Wrapper>
       <Container className="is-hidden-mobile">
         <div className="columns">
-          <div className="column">
+          {/* <div className="column">
             <SocialIcons data={home} />
-          </div>
-          <div className="column has-text-centered">
+          </div> */}
+          <div className="column">
             <a href="/">
-              <p className="is-size-2 has-text-weight-bold">Ebox</p>
+              <p className="is-size-2 has-text-weight-bold">ebox</p>
               {/* <img src="/images/logo.png" alt="logo" /> */}
             </a>
+          </div>
+          <div className="column">
+            <nav
+              className="navbar"
+              role="navigation"
+              aria-label="main navigation">
+              <div className="navbar-menu is-uppercase has-text-weight-bold">
+                {NavItems.map(item => (
+                  <Link to={item.url} className="navbar-item" key={item.id}>
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            </nav>
           </div>
           <div className="column has-text-right has-text-weight-bold">
             <p>
@@ -181,15 +192,6 @@ const Header = ({ home }) => {
             </p>
           </div>
         </div>
-        <nav className="navbar" role="navigation" aria-label="main navigation">
-          <div className="navbar-menu is-uppercase has-text-weight-bold">
-            {NavItems.map(item => (
-              <Link to={item.url} className="navbar-item" key={item.id}>
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </nav>
       </Container>
       <ContainerMobile className="is-hidden-tablet">
         <div className="columns is-mobile">
