@@ -18,41 +18,60 @@ const cartQuery = gql`
 `;
 const Wrapper = styled.div`
   padding: 0rem 6rem;
-  background: ${props => props.theme.darkShades};
+  @media only screen and (max-width: 768px) {
+    padding: 0rem 1rem;
+  }
 `;
 const Container = styled.div`
   margin-top: 0.6rem;
-  .navbar {
-    background: ${props => props.theme.darkShades};
-  }
   a {
-    color: ${props => props.theme.textWhite};
-    :focus {
-      background-color: #000000;
-    }
+    color: ${props => props.theme.textColor};
   }
   p {
-    color: ${props => props.theme.textWhite}!important;
+    color: ${props => props.theme.textColor}!important;
   }
   .navbar-menu {
     flex-grow: unset;
     margin: 0 auto;
     .navbar-item:hover {
-      color: ${props => props.theme.textWhite};
-      background: ${props => props.theme.darkShades};
+      color: ${props => props.theme.textColor};
     }
   }
   img {
     height: 40px;
     width: 120px;
   }
+  .columns {
+    padding: 1rem 0rem 2rem;
+  }
+  .column {
+    align-self: center;
+  }
+  .logo-color {
+    color: ${props => props.theme.dangerColor};
+  }
+`;
+
+const SearchButton = styled.button`
+  margin-right: 0.5rem;
+  :hover {
+    background: ${props => props.theme.dangerColor};
+    color: white;
+  }
+`;
+
+const CartButton = styled.button`
+  background: ${props => props.theme.dangerColor};
+  color: white;
+  span {
+    padding: 0 !important;
+  }
 `;
 
 const ContainerMobile = styled.div`
-  position: relative;
   img {
-    width: 100px;
-    margin-top: 1rem;
+    width: 88%;
+    margin-top: 3rem;
     margin-left: 1rem;
   }
   .menu-trigger {
@@ -62,13 +81,19 @@ const ContainerMobile = styled.div`
     font-size: 1.4rem;
     color: #4a4a4a;
   }
+  .logo-mobile {
+    align-self: center;
+  }
+  .logo-color {
+    color: ${props => props.theme.dangerColor};
+  }
 `;
 
 const MobileMenu = styled(animated.div)`
   && {
     position: fixed;
     left: 0;
-    top: 161px;
+    top: 92px;
     height: 100%;
     width: 100%;
     background-color: #2f2f2f;
@@ -92,11 +117,13 @@ const MobileMenu = styled(animated.div)`
 `;
 
 const Cart = styled.div`
-  width: 80px;
+  font-size: 1.2rem;
+  width: 40px;
   float: right;
   position: relative;
   span {
-    padding: 0rem 0.1rem;
+    font-weight: 700;
+    padding: 0 0.1rem 0 0.5rem;
   }
   .count {
     background-color: ${config.primaryColor};
@@ -116,7 +143,6 @@ const CartMobile = styled.div`
   width: 8rem;
   float: right;
   margin-top: 6rem;
-  margin-right: 0.3rem;
   .count {
     left: 16px;
   }
@@ -137,13 +163,16 @@ const Header = ({ home }) => {
 
   const cart = (
     <Cart>
-      <Link to="/cart">
-        <span>Cart</span>
-        <i className="fas fa-shopping-cart" />
-        {cartItems.length > 0 && (
-          <div className="count">{cartItems.length}</div>
-        )}
-      </Link>
+      <CartButton className="button" type="button">
+        <Link to="/cart">
+          <span className="has-text-white">
+            <i className="fas fa-shopping-cart" />
+          </span>
+          {cartItems.length > 0 && (
+            <div className="count">{cartItems.length}</div>
+          )}
+        </Link>
+      </CartButton>
     </Cart>
   );
 
@@ -165,8 +194,9 @@ const Header = ({ home }) => {
           </div> */}
           <div className="column">
             <a href="/">
-              <p className="is-size-2 has-text-weight-bold">ebox</p>
-              {/* <img src="/images/logo.png" alt="logo" /> */}
+              <span className="is-size-2 has-text-weight-bold">
+                <span className="logo-color">e</span>box
+              </span>
             </a>
           </div>
           <div className="column">
@@ -184,20 +214,23 @@ const Header = ({ home }) => {
             </nav>
           </div>
           <div className="column has-text-right has-text-weight-bold">
-            <p>
-              <a href="/">
-                Search <i className="fas fa-search" />
-              </a>{' '}
-              |{cart}
-            </p>
+            <SearchButton className="button">
+              <i className="fas fa-search" />
+            </SearchButton>{' '}
+            {cart}
           </div>
         </div>
       </Container>
       <ContainerMobile className="is-hidden-tablet">
         <div className="columns is-mobile">
-          <div className="column">
+          <div className="column logo-mobile">
             <Link to="/">
-              <img src={config.logo} alt={`${config.siteName} logo`} />
+              <a href="/">
+                <span className="is-size-2 has-text-weight-bold">
+                  <span className="logo-color">e</span>
+                  box
+                </span>
+              </a>
             </Link>
           </div>
           <div className="column">

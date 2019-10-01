@@ -22,7 +22,7 @@ export const theme = {
   // Use as the text color for dark-on-light designs,
   // or as the background for inverted designs.
   darkShades,
-  dangerColor: '#f44336',
+  dangerColor: '#FE4330',
 
   primaryColor: mainBrandColor,
   textWhite: '#ffffff',
