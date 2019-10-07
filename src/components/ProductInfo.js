@@ -37,7 +37,6 @@ import Heading from './element/Heading';
 const Price = styled.div`
   color: ${config.primaryColor};
   font-size: 1.5rem;
-  margin-top: -2rem;
   span {
     color: #4a4a4a;
     font-size: 1rem;

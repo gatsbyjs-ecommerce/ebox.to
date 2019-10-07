@@ -13,24 +13,29 @@ const Container = styled(animated.div)`
   .card {
     border: none;
     box-shadow: none;
+    background-color: #f5f5f5;
     .image.is-4by3 {
       padding-top: 0;
     }
+    .card-image {
+      padding: 1rem 1rem !important;
+    }
     .card-content {
-      padding-left: 0;
-      padding-top: 0.8rem;
       position: relative;
       a {
         color: #363636;
+      }
+      .price-container {
+        width: 50px;
+        position: absolute;
+        right: 5%;
+        top: 0.5rem;
       }
       .price {
         color: ${config.primaryColor};
       }
       .old-price {
         text-decoration: line-through;
-      }
-      .field {
-        margin-top: 2rem;
       }
     }
   }
@@ -40,6 +45,9 @@ const Image = styled(Img)`
   object-fit: cover;
   height: auto;
   width: 100%;
+  @media only screen and (max-width: 768px) {
+    height: 75%;
+  }
 `;
 
 const ProductItem = ({ item, styles }) => (
@@ -50,34 +58,32 @@ const ProductItem = ({ item, styles }) => (
           <Link to={`/product/${item.slug.current}`}>
             <figure className="image is-4by3">
               <Image fluid={item.variant.featuredImage.asset.fluid} />
-              {/* <Image
-                sizes={item.variant.featuredImage.asset.fluid.sizes}
-                alt={item.variant.featuredImage.asset.fluid.title}
-                title={item.variant.featuredImage.asset.fluid.title}
-                backgroundColor="#f1f1f1"
-              /> */}
             </figure>
           </Link>
         </div>
       )}
       <div className="card-content">
         <div className="media">
-          <div className="media-content">
-            <Title className="title is-5 has-text-weight-bold">
-              <Link to={`/product/${item.slug.current}`}>{item.title}</Link>
-            </Title>
+          <div className="media-content is-flex">
+            <div style={{ maxWidth: '70%' }}>
+              <Title className="title is-5">
+                <Link to={`/product/${item.slug.current}`}>{item.title}</Link>
+              </Title>
+              {item.variant && (
+                <p className="subtitle is-6 has-text-grey">
+                  {item.variant.color}
+                </p>
+              )}
+            </div>
             {item.variant && (
-              <p className="subtitle is-6 has-text-grey">
-                {item.variant.color}
-              </p>
-            )}
-            {item.variant && (
-              <div className="field is-grouped">
+              <div
+                className="field is-grouped is-block"
+                style={{ marginLeft: '0.5rem' }}>
                 <p className="control title is-5 has-text-weight-normal price">
                   {formatCurrency(item.variant.discountPrice)}
                 </p>
                 {item.variant.discountPrice < item.variant.price && (
-                  <p className="control  is-6 has-text-grey-light old-price">
+                  <p className="control is-6 has-text-grey-light old-price">
                     {formatCurrency(item.variant.price)}
                   </p>
                 )}
