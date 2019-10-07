@@ -16,7 +16,8 @@ const Subtitle = ({ children, centered, ...props }) => (
 );
 
 Subtitle.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+    .isRequired,
 };
 
 export default Subtitle;

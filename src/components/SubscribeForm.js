@@ -38,7 +38,7 @@ class SubscribeForm extends React.Component {
     } = this.props;
 
     return (
-      <Container onSubmit={handleSubmit}>
+      <Container onSubmit={handleSubmit} className="is-flex">
         <div className="field is-grouped">
           <div className="control">
             <input

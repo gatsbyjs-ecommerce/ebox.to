@@ -12,6 +12,9 @@ const Container = styled.section`
   .is-multiline {
     justify-content: center;
   }
+  figure {
+    margin: 0rem 0.1rem;
+  }
 `;
 
 const HomeAbout = ({ data }) => (

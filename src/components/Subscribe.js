@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import Heading from './element/Heading';
 import Subtitle from './element/Subtitle';
 
@@ -15,6 +16,14 @@ const SubscribeForm = styled.div`
   .input {
     box-shadow: rgba(0,0,0,0.08) 0px 0px 0px; !important;
     border: 2px solid #f7f3f3;
+  }
+`;
+
+const Button = styled.a`
+  background-color: ${props => props.theme.dangerColor};
+  color: ${props => props.theme.textWhite};
+  :hover {
+    background-color: ${props => props.theme.textWhite};
   }
 `;
 
@@ -36,9 +45,9 @@ const Subscribe = () => (
               />
             </p>
             <p className="control">
-              <a className="button is-info is-medium has-text-weight-bold">
+              <Button className="button is-medium is-rounded has-text-weight-semibold">
                 SUBSCRIBE NOW
-              </a>
+              </Button>
             </p>
           </div>
         </SubscribeForm>

@@ -40,7 +40,6 @@ class ProductsList extends React.Component {
       <Container className="section">
         <Heading>{title}</Heading>
         <Subtitle className="has-text-weight-semibold">
-          {' '}
           In order to give you better service
         </Subtitle>
         <div className="columns is-multiline">

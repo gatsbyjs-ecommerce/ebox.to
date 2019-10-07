@@ -225,12 +225,10 @@ const Header = ({ home }) => {
         <div className="columns is-mobile">
           <div className="column logo-mobile">
             <Link to="/">
-              <a href="/">
-                <span className="is-size-2 has-text-weight-bold">
-                  <span className="logo-color">e</span>
-                  box
-                </span>
-              </a>
+              <span className="is-size-2 has-text-weight-bold">
+                <span className="logo-color">e</span>
+                box
+              </span>
             </Link>
           </div>
           <div className="column">
