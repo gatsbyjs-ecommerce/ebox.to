@@ -30,6 +30,8 @@ const Section = styled.div`
   }
   .button {
     margin-top: 2rem;
+    background-color: ${props => props.theme.dangerColor};
+    color: ${props => props.theme.textWhite};
   }
 `;
 
@@ -69,9 +71,7 @@ const Contact = ({ data }) => {
               </p>
               <p className="control">
                 <a href="#">
-                  <button
-                    type="submit"
-                    className="button is-secondary is-medium">
+                  <button type="submit" className="button is-medium">
                     Get in touch
                   </button>
                 </a>
