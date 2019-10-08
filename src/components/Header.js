@@ -50,6 +50,9 @@ const Container = styled.div`
   .logo-color {
     color: ${props => props.theme.dangerColor};
   }
+  .navbar-menu .navbar-item.active {
+    color: ${props => props.theme.dangerColor};
+  }
 `;
 
 const SearchButton = styled.button`
@@ -206,7 +209,11 @@ const Header = ({ home }) => {
               aria-label="main navigation">
               <div className="navbar-menu is-uppercase has-text-weight-bold">
                 {NavItems.map(item => (
-                  <Link to={item.url} className="navbar-item" key={item.id}>
+                  <Link
+                    to={item.url}
+                    className="navbar-item"
+                    key={item.id}
+                    activeClassName="active">
                     {item.name}
                   </Link>
                 ))}

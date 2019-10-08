@@ -14,6 +14,9 @@ const Container = styled.section`
   svg {
     color: ${props => props.theme.textWhite};
     font-size: 1.6rem;
+    :hover {
+      color: ${props => props.theme.dangerColor};
+    }
   }
 `;
 

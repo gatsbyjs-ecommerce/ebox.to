@@ -1,5 +1,10 @@
 import React from 'react';
 import dayjs from 'dayjs';
+import styled from 'styled-components';
+
+const CodeWrapper = styled.p`
+  color: ${props => props.theme.dangerColor} !important;
+`;
 
 export default ({ data }) => (
   <div className="card">
@@ -15,7 +20,9 @@ export default ({ data }) => (
       <div className="level-item">
         <div>
           <p className="heading is-size-6">Coupon Code</p>
-          <p className="title is-size-5 has-text-weight-bold">{data.code}</p>
+          <CodeWrapper className="title is-size-5 has-text-weight-bold">
+            {data.code}
+          </CodeWrapper>
         </div>
       </div>
       <div className="level-item">

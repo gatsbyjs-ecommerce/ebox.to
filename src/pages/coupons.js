@@ -8,7 +8,6 @@ import Layout from '../components/Layout';
 import CouponItem from '../components/CouponItem';
 
 const ContainerImage = styled.div`
-  background-image: url(/images/bg.jpg);
   width: 100%;
   height: auto;
   padding: 5.8rem 0rem 2rem;
@@ -49,11 +48,6 @@ export default class Coupons extends React.Component {
           url={`${config.siteUrl}/coupons`}
         />
         <div className="container">
-          <ContainerImage>
-            <h2 className="is-size-3 has-text-weight-bold is-uppercase">
-              Coupons
-            </h2>
-          </ContainerImage>
           <div className="columns is-multiline">
             {coupons.map(coupon => (
               <div key={coupon.node.id} className="column is-one-third">
