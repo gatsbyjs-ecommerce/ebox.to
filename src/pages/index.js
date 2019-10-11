@@ -45,8 +45,6 @@ export const query = graphql`
       _id
       heroTitle
       heroSubtitle
-      homeProductsTitle
-      homeProductsSubtitle
       socialHeading
       socialSubheading
       subscribeFormHeading
@@ -67,7 +65,7 @@ const HomePage = ({ data }) => {
         <HomeBanner data={home} homePage={homePage} />
         <div className="container">
           {/* <HomeCardsContent /> */}
-          <ProductsList products={products} homePage={homePage} />
+          <ProductsList products={products} />
           <HomeAbout data={home} homePage={homePage} />
         </div>
         <Subscribe homePage={homePage} />
