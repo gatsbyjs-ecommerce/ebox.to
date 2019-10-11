@@ -79,7 +79,7 @@ const ProductItem = ({ item, styles }) => (
               <div
                 className="field is-grouped is-block"
                 style={{ marginLeft: '0.5rem' }}>
-                <p className="control title is-5 has-text-weight-normal price">
+                <p className="control title is-6 has-text-weight-normal price">
                   {formatCurrency(item.variant.discountPrice)}
                 </p>
                 {item.variant.discountPrice < item.variant.price && (

@@ -17,12 +17,11 @@ const Container = styled.section`
   }
 `;
 
-const HomeAbout = ({ data }) => (
+const HomeAbout = ({ homePage }) => (
   <Container className="section">
-    <Heading centered>Follow Us On Instagram</Heading>
+    <Heading centered>{homePage.socialHeading}</Heading>
     <Subtitle className="has-text-weight-semibold has-text-centered">
-      Far far away, behind the word mountains, far from the countries Vokalia
-      and Consonantia
+      {homePage.socialSubheading}
     </Subtitle>
     <div className="columns is-multiline">
       <div>

@@ -27,14 +27,14 @@ const Button = styled.a`
   }
 `;
 
-const Subscribe = () => (
+const Subscribe = ({ homePage }) => (
   <Card className="card">
     <Container>
       <div className="column is-half is-offset-one-quarter">
         <Subtitle className="has-text-weight-semibold has-text-centered">
-          JOIN OUR NEWSLETTER
+          {homePage.subscribeFormHeading}
         </Subtitle>
-        <Heading>Subscribe Below to get latest offers</Heading>
+        <Heading>{homePage.subscribeFormSubheading}</Heading>
         <SubscribeForm>
           <div className="field is-grouped is-medium">
             <p className="control is-expanded">

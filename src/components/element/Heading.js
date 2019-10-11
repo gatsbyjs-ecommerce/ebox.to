@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Container = styled.div`
+const Container = styled.p`
   line-height: 1.5;
   color: ${props =>
     props.white ? props.theme.textWhite : props.theme.darkShades};

@@ -18,14 +18,14 @@ const StripMobile = styled.div`
   opacity: 0.9;
 `;
 
-const HomeBanner = ({ data }) => (
+const HomeBanner = ({ data, homePage }) => (
   <div>
     <ContainerImage className="is-hidden-mobile">
       <div className="column is-4 is-offset-8 has-text-centered">
         <Subtitle white className="has-text-weight-bold">
-          Here&apos;s description of the featured collection or promotion.
+          {homePage.heroTitle}
         </Subtitle>
-        <Heading white>spring sale</Heading>
+        <Heading white>{homePage.heroSubtitle}</Heading>
       </div>
     </ContainerImage>
     <StripMobile className="is-hidden-tablet">

@@ -41,24 +41,36 @@ export const query = graphql`
         }
       }
     }
+    sanityHomePage {
+      _id
+      heroTitle
+      heroSubtitle
+      homeProductsTitle
+      homeProductsSubtitle
+      socialHeading
+      socialSubheading
+      subscribeFormHeading
+      subscribeFormSubheading
+    }
   }
 `;
 
 const HomePage = ({ data }) => {
   const home = data.sanitySiteSettings;
   const products = data.allSanityProduct.edges;
+  const homePage = data.sanityHomePage;
 
   return (
     <Layout>
       <Seo title="Home" description={home.description} url={config.siteUrl} />
       <div>
-        <HomeBanner data={home} />
+        <HomeBanner data={home} homePage={homePage} />
         <div className="container">
           {/* <HomeCardsContent /> */}
-          <ProductsList products={products} />
-          <HomeAbout data={home} />
+          <ProductsList products={products} homePage={homePage} />
+          <HomeAbout data={home} homePage={homePage} />
         </div>
-        <Subscribe />
+        <Subscribe homePage={homePage} />
       </div>
     </Layout>
   );

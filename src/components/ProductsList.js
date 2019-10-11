@@ -32,15 +32,15 @@ class ProductsList extends React.Component {
   toggleCategory = category => this.setState({ activeCategory: category });
 
   render() {
-    const { title, products } = this.props;
+    const { products, homePage } = this.props;
     const { isOpen, activeCategory } = this.state;
     const keys = products.map(item => item.node._id);
 
     return (
       <Container className="section">
-        <Heading>{title}</Heading>
+        <Heading>{homePage.homeProductsTitle}</Heading>
         <Subtitle className="has-text-weight-semibold">
-          In order to give you better service
+          {homePage.homeProductsSubtitle}
         </Subtitle>
         <div className="columns is-multiline">
           <Trail
